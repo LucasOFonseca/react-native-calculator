@@ -1,0 +1,25 @@
+[
+  {
+    "dataInputs": [
+      {
+        "title": "name",
+        "key": "name"
+      }
+    ],
+    "type": "folder",
+    "title": "Component",
+    "fileName": "{{name}}",
+    "content": [
+      {
+        "type": "file",
+        "fileName": "{{name}}.tsx",
+        "content": "import React from 'react';\r\nimport {StyleSheet, View} from 'react-native';\r\n\r\nconst styles = StyleSheet.create({\r\n  container: {},\r\n});\r\n\r\ninterface {{name}}Props {\r\n  children?: React.ReactNode;\r\n};\r\n\r\nconst {{name}}: React.FC<{{name}}Props> = ({children}) => {\r\n  return <View style={styles.container}>{children}</View>;\r\n};\r\n\r\nexport default {{name}};\r\n"
+      },
+      {
+        "type": "file",
+        "fileName": "index.ts",
+        "content": "import {{name}} from './{{name}}';\r\n\r\nexport default {{name}};\r\n"
+      }
+    ]
+  }
+]
